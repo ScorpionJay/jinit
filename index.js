@@ -8,7 +8,7 @@ program
   .command("install [name]")
   .alias("i")
   .action((name = "react") => {
-    console.log("init", name, template);
+    console.log("init", name);
     // download template from github
     // default branch react
     download(`ScorpionJay/jinit/#${name}`, ".", function(err) {
