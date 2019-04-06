@@ -5,7 +5,7 @@ const download = require("download-git-repo");
 
 program
   .version("0.0.1", "-v --version")
-  .command("install [name] [template]", "install template")
+  .command("install [name] [template]")
   .alias("i")
   .action((name = "jinit", template = "react") => {
     console.log("init", name, template);
