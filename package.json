@@ -1,0 +1,25 @@
+{
+  "name": "jinit",
+  "version": "0.0.2",
+  "description": "init template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Jay",
+    "email": "jay.wang.scorpion@gmail.com"
+  },
+  "license": "MIT",
+  "bin": {
+    "jinit": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.20.0",
+    "download-git-repo": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScorpionJay/jinit"
+  }
+}
