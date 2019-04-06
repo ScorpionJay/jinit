@@ -5,14 +5,13 @@ const download = require("download-git-repo");
 
 program
   .version("0.0.1", "-v --version")
-  .command("install [name] [template]")
+  .command("install [name]")
   .alias("i")
-  .action((name = "jinit", template = "react") => {
+  .action((name = "react") => {
     console.log("init", name, template);
     // download template from github
-    // defalut repository jinit
     // default branch react
-    download(`ScorpionJay/${name}/#${template}`, ".", function(err) {
+    download(`ScorpionJay/jinit/#${name}`, ".", function(err) {
       console.log(err ? "Error" : "Success");
     });
   });
