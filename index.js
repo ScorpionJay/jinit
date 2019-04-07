@@ -3,12 +3,28 @@
 const program = require("commander");
 const download = require("download-git-repo");
 
+program.version("0.0.1", "-v --version");
+
+// init project
 program
-  .version("0.0.1", "-v --version")
-  .command("install [name]")
-  .alias("i")
+  .command("project [projectName]")
+  .alias("p")
+  .description("init project")
+  .action((projectName = "react") => {
+    console.log("init project", projectName);
+    // download project from github
+    download(`ScorpionJay/${projectName}`, ".", function(err) {
+      console.log(err ? "Error" : "Success");
+    });
+  });
+
+// init snippet
+program
+  .command("snippet [name]")
+  .alias("s")
+  .description("init snippet")
   .action((name = "react") => {
-    console.log("init", name);
+    console.log("init snippet", name);
     // download template from github
     // default branch react
     download(`ScorpionJay/jinit/#${name}`, ".", function(err) {
