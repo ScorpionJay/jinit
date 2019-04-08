@@ -2,9 +2,6 @@
 
 init template
 
-- react
-- ...
-
 ## install
 
 ```
