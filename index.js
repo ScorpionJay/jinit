@@ -20,14 +20,14 @@ program
 
 // init snippet
 program
-  .command("snippet [name]")
+  .command("snippet [snippetName]")
   .alias("s")
   .description("init snippet")
-  .action((name = "react") => {
-    console.log("init snippet", name);
+  .action((snippetName = "react") => {
+    console.log("init snippet", snippetName);
     // download template from github
     // default branch react
-    download(`ScorpionJay/jinit/#${name}`, ".", function(err) {
+    download(`ScorpionJay/jinit/#${snippetName}`, ".", function(err) {
       console.log(err ? "Error" : "Success");
     });
   });
